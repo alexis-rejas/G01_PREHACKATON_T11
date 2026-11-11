@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EventosReport" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4c3006b1-bcc3-423b-8c7d-adf9f440503e">
+	<queryString language="SQL">
+		<![CDATA[SELECT 
+	id_evento,
+	nombre,
+	descripcion,
+	fecha,
+	lugar,
+	modalidad,
+	estado
+FROM db_eventos.eventos
+ORDER BY id_evento ASC]]>
+	</queryString>
+	<field name="id_evento" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_evento"/>
+		<property name="com.jaspersoft.studio.field.label" value="ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="eventos"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="eventos"/>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="descripcion"/>
+		<property name="com.jaspersoft.studio.field.label" value="descripcion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="eventos"/>
+	</field>
+	<field name="fecha" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="eventos"/>
+	</field>
+	<field name="lugar" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="lugar"/>
+		<property name="com.jaspersoft.studio.field.label" value="lugar"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="eventos"/>
+	</field>
+	<field name="modalidad" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="modalidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="modalidad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="eventos"/>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="estado"/>
+		<property name="com.jaspersoft.studio.field.label" value="estado"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="eventos"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="60" backcolor="#1976D2" uuid="123e4567-e89b-12d3-a456-426614174000"/>
+				<graphicElement/>
+			</rectangle>
+			<textField>
+				<reportElement x="10" y="10" width="780" height="40" forecolor="#FFFFFF" uuid="223e4567-e89b-12d3-a456-426614174001"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["REPORTE DE EVENTOS"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="50" height="30" backcolor="#2196F3" uuid="323e4567-e89b-12d3-a456-426614174002"/>
+				<graphicElement/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="50" height="30" forecolor="#FFFFFF" uuid="423e4567-e89b-12d3-a456-426614174003"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ID"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="50" y="0" width="140" height="30" backcolor="#2196F3" uuid="523e4567-e89b-12d3-a456-426614174004"/>
+				<graphicElement/>
+			</rectangle>
+			<textField>
+				<reportElement x="50" y="0" width="140" height="30" forecolor="#FFFFFF" uuid="623e4567-e89b-12d3-a456-426614174005"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NOMBRE"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="190" y="0" width="180" height="30" backcolor="#2196F3" uuid="723e4567-e89b-12d3-a456-426614174006"/>
+				<graphicElement/>
+			</rectangle>
+			<textField>
+				<reportElement x="190" y="0" width="180" height="30" forecolor="#FFFFFF" uuid="823e4567-e89b-12d3-a456-426614174007"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DESCRIPCIÓN"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="370" y="0" width="80" height="30" backcolor="#2196F3" uuid="923e4567-e89b-12d3-a456-426614174008"/>
+				<graphicElement/>
+			</rectangle>
+			<textField>
+				<reportElement x="370" y="0" width="80" height="30" forecolor="#FFFFFF" uuid="a23e4567-e89b-12d3-a456-426614174009"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["FECHA"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="450" y="0" width="100" height="30" backcolor="#2196F3" uuid="b23e4567-e89b-12d3-a456-426614174010"/>
+				<graphicElement/>
+			</rectangle>
+			<textField>
+				<reportElement x="450" y="0" width="100" height="30" forecolor="#FFFFFF" uuid="c23e4567-e89b-12d3-a456-426614174011"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["LUGAR"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="550" y="0" width="110" height="30" backcolor="#2196F3" uuid="d23e4567-e89b-12d3-a456-426614174012"/>
+				<graphicElement/>
+			</rectangle>
+			<textField>
+				<reportElement x="550" y="0" width="110" height="30" forecolor="#FFFFFF" uuid="e23e4567-e89b-12d3-a456-426614174013"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MODALIDAD"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="660" y="0" width="142" height="30" backcolor="#2196F3" uuid="f23e4567-e89b-12d3-a456-426614174014"/>
+				<graphicElement/>
+			</rectangle>
+			<textField>
+				<reportElement x="660" y="0" width="142" height="30" forecolor="#FFFFFF" uuid="023e4567-e89b-12d3-a456-426614174015"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ESTADO"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="50" height="25" backcolor="#FFFFFF" uuid="123e4567-e89b-12d3-a456-426614174016"/>
+				<graphicElement/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="50" height="25" uuid="223e4567-e89b-12d3-a456-426614174017"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_evento}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="50" y="0" width="140" height="25" backcolor="#FFFFFF" uuid="323e4567-e89b-12d3-a456-426614174018"/>
+				<graphicElement/>
+			</rectangle>
+			<textField>
+				<reportElement x="50" y="0" width="140" height="25" uuid="423e4567-e89b-12d3-a456-426614174019"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="190" y="0" width="180" height="25" backcolor="#FFFFFF" uuid="523e4567-e89b-12d3-a456-426614174020"/>
+				<graphicElement/>
+			</rectangle>
+			<textField>
+				<reportElement x="190" y="0" width="180" height="25" uuid="623e4567-e89b-12d3-a456-426614174021"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="370" y="0" width="80" height="25" backcolor="#FFFFFF" uuid="723e4567-e89b-12d3-a456-426614174022"/>
+				<graphicElement/>
+			</rectangle>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="370" y="0" width="80" height="25" uuid="823e4567-e89b-12d3-a456-426614174023"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="450" y="0" width="100" height="25" backcolor="#FFFFFF" uuid="923e4567-e89b-12d3-a456-426614174024"/>
+				<graphicElement/>
+			</rectangle>
+			<textField>
+				<reportElement x="450" y="0" width="100" height="25" uuid="a23e4567-e89b-12d3-a456-426614174025"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lugar}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="550" y="0" width="110" height="25" backcolor="#FFFFFF" uuid="b23e4567-e89b-12d3-a456-426614174026"/>
+				<graphicElement/>
+			</rectangle>
+			<textField>
+				<reportElement x="550" y="0" width="110" height="25" uuid="c23e4567-e89b-12d3-a456-426614174027"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{modalidad}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="660" y="0" width="142" height="25" backcolor="#FFFFFF" uuid="d23e4567-e89b-12d3-a456-426614174028"/>
+				<graphicElement/>
+			</rectangle>
+			<textField>
+				<reportElement x="660" y="0" width="142" height="25" uuid="e23e4567-e89b-12d3-a456-426614174029"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="30" backcolor="#EEEEEE" uuid="f23e4567-e89b-12d3-a456-426614174030"/>
+				<graphicElement/>
+			</rectangle>
+			<textField>
+				<reportElement x="10" y="5" width="300" height="20" uuid="023e4567-e89b-12d3-a456-426614174031"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="650" y="5" width="150" height="20" uuid="123e4567-e89b-12d3-a456-426614174032"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

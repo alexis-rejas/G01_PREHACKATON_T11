@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" 
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="vallegrande.edu.pe.view.EventoView">
+
+    <top>
+        <VBox spacing="10" style="-fx-padding: 15; -fx-background-color: #2196F3;">
+            <Label text="GESTIÓN DE EVENTOS" style="-fx-text-fill: white; -fx-font-size: 20; -fx-font-weight: bold;"/>
+        </VBox>
+    </top>
+
+    <center>
+        <HBox spacing="20" style="-fx-padding: 20;">
+            
+            <VBox spacing="10" style="-fx-min-width: 350;">
+                <Label text="NUEVO EVENTO" style="-fx-font-size: 14; -fx-font-weight: bold;"/>
+                <TextField fx:id="txtIdEvento" promptText="ID" editable="false"/>
+                <TextField fx:id="txtNombre" promptText="Nombre"/>
+                <TextArea fx:id="txtDescripcion" promptText="Descripción" prefHeight="80" wrapText="true"/>
+                <DatePicker fx:id="dtpFecha"/>
+                <TextField fx:id="txtLugar" promptText="Lugar"/>
+                <ComboBox fx:id="cmbModalidad" promptText="Modalidad"/>
+                <ComboBox fx:id="cmbEstado" promptText="Estado"/>
+                <HBox spacing="10">
+                    <Button fx:id="btnGuardar" text="GUARDAR" onAction="#onGuardar"/>
+                    <Button fx:id="btnActualizar" text="ACTUALIZAR" onAction="#onActualizar"/>
+                    <Button fx:id="btnLimpiar" text="LIMPIAR" onAction="#onLimpiar"/>
+                    <Button fx:id="btnReporte" text="REPORTE" onAction="#onReporte" style="-fx-base: #FF9800;"/>
+                </HBox>
+            </VBox>
+
+            <VBox spacing="10" HBox.hgrow="ALWAYS">
+                <HBox spacing="10">
+                    <TextField fx:id="txtBuscar" promptText="Buscar..." HBox.hgrow="ALWAYS"/>
+                    <Button text="BUSCAR" onAction="#onBuscar"/>
+                </HBox>
+                <TableView fx:id="tableEventos" VBox.vgrow="ALWAYS"/>
+                <Label fx:id="lblEstado" text="Total: 0"/>
+            </VBox>
+        </HBox>
+    </center>
+
+</BorderPane>
